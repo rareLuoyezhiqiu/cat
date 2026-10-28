@@ -2,6 +2,7 @@
 # 招新题回顾
 共十道题，难度跳跃式增长（划掉）。目测含STL容器，贪心算法，逆向思维。
 依次按照有思路解答出来但有易错点，有思路但未解答出来，无思路，解答出来排序。
+# T839140 T839243
 ## T839140 农场主投草料
 题目描述​
 农场由 129 条横线与 129 条竖线构成网格，相邻平行线距离为 1。横线从上到下编号 0,1,...,128，竖线从左到右编号 0,1,...,128，交点坐标为 (x,y)。部分交点放置草料堆，每处有对应重量。农场主只能在网格交点安放一台投喂机，投喂区域是以安放点为中心、边长为 2d 的正方形，边界上的草料堆同样可被覆盖。若投喂机放在 (tx,ty)，则覆盖满足 tx-d <= x <= tx+d、ty-d <= y <= ty+d 的点 (x,y)。求一共有多少个安放点可以达到最大值，以及最多可以覆盖的草料总重量。​
@@ -108,21 +109,20 @@ int main() {
     for (int i = 1; i <= N; i++) {
         long long add = op[i-1][1] - op[i-1][0];//即每次要储存字符串的长度
         len[i] = min(M, len[i-1] + add);
-    }
+    }//所以这段代码用在哪里了
 
     string ans;
     for (int p = 0; p < K; p++) {
         long long cur = p;
 
-        for (int i = N; i >= 1; i--) {
-            long long A = op[i-1][0], B = op[i-1][1], C = op[i-1][2];
-            long long addLen = B - A;
-            if (cur < C) {
-                // 不变
-            } else if (cur < C + addLen) {
-                cur = A + (cur - C);
-            } else {
-                cur -= addLen;
+        for (int i = N; i >= 1; i--) {//反向回溯N次定位对应原来的位置
+            long long A = op[i-1][0], B = op[i-1][1], C = op[i-1][2];从最后一次开始A起始位置,B终止位置,C复制位置
+            long long addLen = B - A;//复制长度
+            if (cur < C) {//如果逆向前的位置在插入位置前面就不用变
+            } else if (cur < C + addLen) {//这个逻辑有点神,和前面if条件补上了,如果不符合上一个if条件说明cur>=c,这里再补充了一个cur<c+addlen,tql
+                cur = A + (cur - C);//看不懂先标注一下这里为啥这么搞
+            } else {//都不符合说明cur>=c+addlen了,
+                cur -= addLen;//看不懂同标准一下
             }
         }
         // 此时 cur 是初始字符串 S 中的位置（0-indexed）

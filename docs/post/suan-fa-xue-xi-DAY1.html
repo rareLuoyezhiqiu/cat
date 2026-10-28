@@ -87,6 +87,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h1>招新题回顾</h1>
 <p>共十道题，难度跳跃式增长（划掉）。目测含STL容器，贪心算法，逆向思维。<br>
 依次按照有思路解答出来但有易错点，有思路但未解答出来，无思路，解答出来排序。</p>
+<h1>T839140 T839243</h1>
 <h2>T839140 农场主投草料</h2>
 <p>题目描述​<br>
 农场由 129 条横线与 129 条竖线构成网格，相邻平行线距离为 1。横线从上到下编号 0,1,...,128，竖线从左到右编号 0,1,...,128，交点坐标为 (x,y)。部分交点放置草料堆，每处有对应重量。农场主只能在网格交点安放一台投喂机，投喂区域是以安放点为中心、边长为 2d 的正方形，边界上的草料堆同样可被覆盖。若投喂机放在 (tx,ty)，则覆盖满足 tx-d &lt;= x &lt;= tx+d、ty-d &lt;= y &lt;= ty+d 的点 (x,y)。求一共有多少个安放点可以达到最大值，以及最多可以覆盖的草料总重量。​<br>
@@ -187,21 +188,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">1</span>; i &lt;= N; i++) {
         <span class="pl-k">long</span> <span class="pl-k">long</span> add = op[i-<span class="pl-c1">1</span>][<span class="pl-c1">1</span>] - op[i-<span class="pl-c1">1</span>][<span class="pl-c1">0</span>];<span class="pl-c"><span class="pl-c">//</span>即每次要储存字符串的长度</span>
         len[i] = <span class="pl-c1">min</span>(M, len[i-<span class="pl-c1">1</span>] + add);
-    }
+    }<span class="pl-c"><span class="pl-c">//</span>所以这段代码用在哪里了</span>
 
     string ans;
     <span class="pl-k">for</span> (<span class="pl-k">int</span> p = <span class="pl-c1">0</span>; p &lt; K; p++) {
         <span class="pl-k">long</span> <span class="pl-k">long</span> cur = p;
 
-        <span class="pl-k">for</span> (<span class="pl-k">int</span> i = N; i &gt;= <span class="pl-c1">1</span>; i--) {
-            <span class="pl-k">long</span> <span class="pl-k">long</span> A = op[i-<span class="pl-c1">1</span>][<span class="pl-c1">0</span>], B = op[i-<span class="pl-c1">1</span>][<span class="pl-c1">1</span>], C = op[i-<span class="pl-c1">1</span>][<span class="pl-c1">2</span>];
-            <span class="pl-k">long</span> <span class="pl-k">long</span> addLen = B - A;
-            <span class="pl-k">if</span> (cur &lt; C) {
-                <span class="pl-c"><span class="pl-c">//</span> 不变</span>
-            } <span class="pl-k">else</span> <span class="pl-k">if</span> (cur &lt; C + addLen) {
-                cur = A + (cur - C);
-            } <span class="pl-k">else</span> {
-                cur -= addLen;
+        <span class="pl-k">for</span> (<span class="pl-k">int</span> i = N; i &gt;= <span class="pl-c1">1</span>; i--) {<span class="pl-c"><span class="pl-c">//</span>反向回溯N次定位对应原来的位置</span>
+            <span class="pl-k">long</span> <span class="pl-k">long</span> A = op[i-<span class="pl-c1">1</span>][<span class="pl-c1">0</span>], B = op[i-<span class="pl-c1">1</span>][<span class="pl-c1">1</span>], C = op[i-<span class="pl-c1">1</span>][<span class="pl-c1">2</span>];从最后一次开始A起始位置,B终止位置,C复制位置
+            <span class="pl-k">long</span> <span class="pl-k">long</span> addLen = B - A;<span class="pl-c"><span class="pl-c">//</span>复制长度</span>
+            <span class="pl-k">if</span> (cur &lt; C) {<span class="pl-c"><span class="pl-c">//</span>如果逆向前的位置在插入位置前面就不用变</span>
+            } <span class="pl-k">else</span> <span class="pl-k">if</span> (cur &lt; C + addLen) {<span class="pl-c"><span class="pl-c">//</span>这个逻辑有点神,和前面if条件补上了,如果不符合上一个if条件说明cur&gt;=c,这里再补充了一个cur&lt;c+addlen,tql</span>
+                cur = A + (cur - C);<span class="pl-c"><span class="pl-c">//</span>看不懂先标注一下这里为啥这么搞</span>
+            } <span class="pl-k">else</span> {<span class="pl-c"><span class="pl-c">//</span>都不符合说明cur&gt;=c+addlen了,</span>
+                cur -= addLen;<span class="pl-c"><span class="pl-c">//</span>看不懂同标准一下</span>
             }
         }
         <span class="pl-c"><span class="pl-c">//</span> 此时 cur 是初始字符串 S 中的位置（0-indexed）</span>
