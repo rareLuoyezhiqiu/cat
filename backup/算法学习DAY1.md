@@ -24,7 +24,7 @@ int main() {
     for (int tx = 0; tx <= 128; tx++) {
         for (int ty = 0; ty <= 128; ty++) {
             int sum = 0;//建立int类型的sum用来求和质量
-            for (auto &p : a) {//这个条件内容我不懂什么意思(),疑似是从a里面一直取出内容赋值给p,然后用p进入循环if条件
+            for (auto &p : a) {//从a里面一直取出内容赋值给p,然后用p进入循环if条件
                 if (abs(p[0] - tx) <= d && abs(p[1] - ty) <= d)//abs取那什么机器和每个草料堆的距离,然后比较d,如果x和y的距离都在d里面说明可以覆盖到这个机器
                     sum += p[2];//符合条件的草料堆质量加进sum总和之中
             }
@@ -76,6 +76,7 @@ int main(void)
 啊当然时间复杂度我直接问的ai,这个我认,我没手算复杂度()
 
 ## T839243 魔法卷轴
+### 怎么还有回溯(?)
 题目描述​
 初始卷轴符文序列为字符串 S。进行 N 次复制法术。对于第 i 次法术，指定三个整数 Ai,Bi,Ci，执行：1. 从当前序列复制位置 Ai 到 Bi 之间的所有字符；2. 将复制得到的片段插入当前序列的位置 Ci。位置 x 表示从字符串开头向后数 x 个字符与后一个字符之间的位置（位置 0 表示开头）。每次法术复制的片段来自本次操作开始前的序列。若操作后字符串长度超过 M，则从结尾删除字符直到长度为 M。求经过 N 次操作后 S 的前 K 个字符。​
 输入格式​
@@ -100,16 +101,19 @@ int main() {
     vector<array<long long,3>> op(N);//应该是建立一个op的数组,每个元素是含3个longlong类型数字的数组(依旧叠盒子~)
     for (int i = 0; i < N; i++)
         cin >> op[i][0] >> op[i][1] >> op[i][2];//分别0记录开始位置,1记录终止位置,2记录复制位置
+
     // len[i] = 第 i 次操作后的长度（截断到 M），len[0] = |S|
-    vector<long long> len(N + 1);
-    len[0] = S.size();
+    vector<long long> len(N + 1);//定义行在这谁能想到
+    len[0] = S.size();//第一个元素赋值原字符串的长度
     for (int i = 1; i <= N; i++) {
-        long long add = op[i-1][1] - op[i-1][0];
+        long long add = op[i-1][1] - op[i-1][0];//即每次要储存字符串的长度
         len[i] = min(M, len[i-1] + add);
     }
+
     string ans;
     for (int p = 0; p < K; p++) {
         long long cur = p;
+
         for (int i = N; i >= 1; i--) {
             long long A = op[i-1][0], B = op[i-1][1], C = op[i-1][2];
             long long addLen = B - A;
@@ -128,5 +132,5 @@ int main() {
     return 0;
 }
 ```
-饿了先吃个饭,晚上回来再说~
+
 
