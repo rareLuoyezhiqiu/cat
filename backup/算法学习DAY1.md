@@ -120,9 +120,9 @@ int main() {
             long long addLen = B - A;//复制长度
             if (cur < C) {//如果逆向前的位置在插入位置前面就不用变
             } else if (cur < C + addLen) {//这个逻辑有点神,和前面if条件补上了,如果不符合上一个if条件说明cur>=c,这里再补充了一个cur<c+addlen,tql
-                cur = A + (cur - C);//看不懂先标注一下这里为啥这么搞
+                cur = A + (cur - C);//cur-C是这个字符在复制片段内的位置，加A之后成复制前对应的原位置
             } else {//都不符合说明cur>=c+addlen了,
-                cur -= addLen;//看不懂同标准一下
+                cur -= addLen;//即用cur的位置减去复制的长度就是对应复制前的字符串内位置，因为复制前后只增加了长度而其他都没变化，所以可以直接减法找出对应原来的位置
             }
         }
         // 此时 cur 是初始字符串 S 中的位置（0-indexed）
@@ -132,5 +132,5 @@ int main() {
     return 0;
 }
 ```
-
+题解到此，这道题我就没什么别的思路啦~
 
