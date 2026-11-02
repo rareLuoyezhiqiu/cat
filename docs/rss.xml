@@ -1,5 +1,70 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Fri, 30 Oct 2026 10:46:40 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.3</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.3.html</link><description>我草不对怎么越来越难了，我草开始女娲补天了
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Mon, 02 Nov 2026 07:03:24 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.4/stl/string类型</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.4-stl-string-lei-xing.html</link><description>## string的声明与初始化
+
+1. string的声明:
+   ```c++
+   string a;
+   ```
+2. 初始化赋值:
+   ```c++
+   string a='Hello,World!';
+   ```
+3. 可使用另一个string初始化这个字符串;
+   ```c++
+    string a=b;
+   ```
+4. string的写入:
+   ```c++
+   cin&gt;&gt;a;
+   getline(cin,a);
+   //前者写入到空格就停止,后者写入到\n停止写入;
+   ```
+5. 使用部分字符串初始化该字符串:
+   ```c++
+    a=b.substr(0,5);
+   //意思是从b中下标为0开始找五个长度的字符初始化a,如果不写长度默认到末尾;
+   ```
+6. 使用char类型数组初始化字符串:
+   ```c++
+   char b='LuoTianYi';
+   string a(b);
+   //然后a就等于b的内容了;
+   ```
+7. 使用重复字符初始化字符串:
+   ```c++
+    string a(5,'A');
+   //意思是把a字符串开始五个长度用'A'填充;
+   ```
+8. 输出:
+   ```c++
+   cout&lt;&lt;a;
+   ```
+## string基本操作
+1. string和char的相互转换（c_str）
+   ```c++
+   char a[100];
+   scanf('%s',&amp;a);
+   string b(a)//建立string类型b，把char类型a给string类型b使用;
+   printf('%s',b.c_str())//把string类型转换为constchar类型输出，因为printf不能识别输出string类型
+   ```
+2. 字符串的长度获取（size或length）
+   ```c++
+   string a;
+   int len=a.size();//优先用这个，stl中自带的内容，所有stl容器都可以使用
+   int len1=a.length();//与上者完全等价
+   ```
+3. 拼接字符串（+或append或+=）
+   ```c++
+   string a='Hello';
+   string b='World!';
+   string end1=a+','+b;//直观方便，但会创造临时变量用来储存，占用空间较多
+   string end2=a.append(',').append(b);//不推荐，不够直观可读，如果需要在原字符串上加可以直接+=，会加在字符串最后面
+   ```
+4. 字符串内容查找（find）
+   ```c++
+   string a=“Hello，World！”;//01234 5 678910 11
+   int fd=a.find('World！');//意为寻找World！的位置，注意这里find找到后会给fd赋值为这个子字符串在原字符串中的初始位置，即W的下标6
+   //视频里面出现个7因为他比我的多了个空格。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.4-stl-string-lei-xing.html</guid><pubDate>Mon, 02 Nov 2026 07:02:44 +0000</pubDate></item><item><title>算法学习NO.3</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.3.html</link><description>我草不对怎么越来越难了，我草开始女娲补天了
 # 招新题回顾第三篇~
 ## T839151
 ## T839151 抠门的管理员
