@@ -102,3 +102,27 @@
    for(auto &i : a)if(i==c){num++;i="Q";};
    //此处则可以直接修改i映射的原字符串的内容
    ```
+## 例题
+[原题链接](https://www.luogu.com.cn/problem/P1481)
+学习了这道题的动态规划做法（说实话我到现在还没懂究竟什么是动态规划，为什么这要用dp数组（）），题目输入时候已经安装字典序排序了，所以这里就不需要原来思想中的max函数，如果不排序的话需要先排序或者用max函数取值
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+int main(void)
+{int n;
+ cin>>n;
+ int dp[n],maxx=0;
+ for(auto &i:dp)i=1;
+ string a[n];
+ for(auto &i : a)cin>>i;
+ for(int i=0;i<n;i++)
+ {for(int k=0;k<i;k++)
+ {if(a[i].find(a[k])==0)dp[i]=dp[k]+1;};};
+ for(auto i : dp)if(maxx<i)maxx=i;
+ cout<<maxx;
+ return 0;
+}
+```
+思想运用
+DP = 大问题拆成结构相同的小问题 + 这些小问题反复重叠（所以要存表） + 小问题的最优解能拼出大问题的最优解
+DP数组则是用来存储数据状态的数组，也就是我的题解中创建的dp[n]用来存储链长度
