@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Thu, 05 Nov 2026 13:36:48 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.7/stl/map键值对容器</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.7-stl-map-jian-zhi-dui-rong-qi.html</link><description>## map键值对容器
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Thu, 05 Nov 2026 13:39:54 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.7/stl/map键值对容器</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.7-stl-map-jian-zhi-dui-rong-qi.html</link><description>## map键值对容器
 ~map居然不是图论graph气死我了~
 1. 是一种关联容器，用于存储一组键值，其中每个键都是唯一的~想象成一把钥匙只能对应一把锁~
 2. 使用定义
@@ -69,7 +69,7 @@
    priotity_queue&lt;T&gt; a;
    a.push(1);//在a队列队尾加入元素1
    a.pop();//弹出优先队列的最前部元素
-   a.top();//同front(),返回优先队列的最前部元素
+   **a.top();//同front(),返回优先队列的最前部元素**
    a.empty();//同
    a.size();
    ```
@@ -87,10 +87,10 @@
 3. 常用函数
    ```c++
    deque&lt;int&gt; a;
-   a.push_back(1);//在a的尾部加入一个元素1
-   a.pop_back();//弹出尾部一个元素
-   a.push_front();//在a的头部加入一个元素1
-   a.pop_front();//弹出头部一个元素
+   **a.push_back(1);//在a的尾部加入一个元素1**
+   **a.pop_back();//弹出尾部一个元素**
+   **a.push_front();//在a的头部加入一个元素1**
+   **a.pop_front();//弹出头部一个元素**
    a.front();//返回头部的一个元素
    a.back();//返回尾部的一个元素
    a.empty();

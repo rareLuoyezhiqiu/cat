@@ -25,7 +25,7 @@
    priotity_queue<T> a;
    a.push(1);//在a队列队尾加入元素1
    a.pop();//弹出优先队列的最前部元素
-   a.top();//同front(),返回优先队列的最前部元素
+   **a.top();//同front(),返回优先队列的最前部元素**
    a.empty();//同
    a.size();
    ```
@@ -43,10 +43,10 @@
 3. 常用函数
    ```c++
    deque<int> a;
-   a.push_back(1);//在a的尾部加入一个元素1
-   a.pop_back();//弹出尾部一个元素
-   a.push_front();//在a的头部加入一个元素1
-   a.pop_front();//弹出头部一个元素
+   **a.push_back(1);//在a的尾部加入一个元素1**
+   **a.pop_back();//弹出尾部一个元素**
+   **a.push_front();//在a的头部加入一个元素1**
+   **a.pop_front();//弹出头部一个元素**
    a.front();//返回头部的一个元素
    a.back();//返回尾部的一个元素
    a.empty();
