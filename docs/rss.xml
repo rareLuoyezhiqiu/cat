@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Thu, 05 Nov 2026 04:53:56 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.6/stl/队列</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.6-stl--dui-lie.html</link><description>## queue队列
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Thu, 05 Nov 2026 08:01:18 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.6/stl/队列</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.6-stl--dui-lie.html</link><description>## queue队列
 1. 是一种**先进先出**的数据结构,理解成日常排队队列即可
 2. 使用定义
    ```c++
@@ -15,7 +15,7 @@
    a.empty();//检查该队列空非空,空返回true,非空返回false
    a.size();
    ```
-## priority_queue队列***非常重要且频繁使用的数据结构
+## priority_queue优先队列***非常重要且频繁使用的数据结构
 1. 不同于queue,该队列的元素**默认自动按照从大到小的顺序排列**
 2.使用定义
    ```c++
@@ -34,7 +34,27 @@
    ```c++
    priotity_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt;&gt; a;//分别代表存什么类型，底层容器是什么，比较规则是什么
     //注意，sort排序和priority队列的greater和less排序不一样含义
-   ···。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.6-stl--dui-lie.html</guid><pubDate>Thu, 05 Nov 2026 01:36:16 +0000</pubDate></item><item><title>算法学习错题复盘P2141</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-cuo-ti-fu-pan-P2141.html</link><description>## [原题链接](https://www.luogu.com.cn/problem/P2141)
+   ···
+## deque双端队列
+1. 是一种容器，可以高效的在队列的首尾两端进行插入和删除
+2. 使用定义
+   ```c++
+   deque&lt;int&gt; a;
+   ```
+3. 常用函数
+   ```c++
+   deque&lt;int&gt; a;
+   a.push_back(1);//在a的尾部加入一个元素1
+   a.pop_back();//弹出尾部一个元素
+   a.push_front();//在a的头部加入一个元素1
+   a.pop_front();//弹出头部一个元素
+   a.front();//返回头部的一个元素
+   a.back();//返回尾部的一个元素
+   a.empty();
+   a.size();
+   a.clear();//清除所有元素
+   ```
+。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.6-stl--dui-lie.html</guid><pubDate>Thu, 05 Nov 2026 01:36:16 +0000</pubDate></item><item><title>算法学习错题复盘P2141</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-cuo-ti-fu-pan-P2141.html</link><description>## [原题链接](https://www.luogu.com.cn/problem/P2141)
 最开始想到了主思想暴力枚举，因为n的范围在3到100，很小可以支撑暴力枚举的时间复杂度，但误解了题意，误认为是统计总方案数而不是符合原题的数字数量，于是直接使用i，k用不降原则直接遍历了整个数组，很显然3AC7WA。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-cuo-ti-fu-pan-P2141.html</guid><pubDate>Wed, 04 Nov 2026 04:49:49 +0000</pubDate></item><item><title>算法学习番外/一些函数和常见易错知识的总结</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-fan-wai---yi-xie-han-shu-he-chang-jian-yi-cuo-zhi-shi-de-zong-jie.html</link><description>1. find函数
    ```c++
    vector&lt;int&gt; v = {1, 2, 3, 4, 5};
