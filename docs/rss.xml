@@ -1,5 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Thu, 05 Nov 2026 09:55:43 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.6/stl/队列</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.6-stl--dui-lie.html</link><description>## queue队列
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Thu, 05 Nov 2026 10:53:01 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.7/stl/map键值对容器</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.7-stl-map-jian-zhi-dui-rong-qi.html</link><description>## map键值对容器
+~map居然不是图论graph气死我了~
+1. 是一种关联容器，用于存储一组键值，其中每个键都是唯一的~想象成一把钥匙只能对应一把锁~
+2. 使用定义
+   ```c++
+   map&lt;T,T&gt; a;//注意之后的输入值必须和定义a的前后T一一对应
+   ```
+3. 常用函数
+   ```c++
+   map&lt;T1,T2&gt; a;//定义时候谁在前谁是key,这里T1是key，T2是value
+   a.insert(t1,t2);//插入一个元素(t1,t2)
+   a.erase(t1);//填写key删除
+   a.find(t1);//查找元素
+   a.count(t1);//统计元素个数,因为key是唯一对应的,所以大多数时候用来统计是否存在key
+   a.size();
+   a.begin();
+   a.end();
+   a.clear();
+   a.empty();
+   a.lower_bound();//作用存疑
+   a.upper_bound();//作用存疑
+   ```
+## mutimap键值对容器
+
+   。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.7-stl-map-jian-zhi-dui-rong-qi.html</guid><pubDate>Thu, 05 Nov 2026 10:52:34 +0000</pubDate></item><item><title>算法学习NO.6/stl/队列</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.6-stl--dui-lie.html</link><description>## queue队列
 1. 是一种**先进先出**的数据结构,理解成日常排队队列即可
 2. 使用定义
    ```c++
