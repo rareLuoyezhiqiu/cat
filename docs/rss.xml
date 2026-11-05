@@ -1,5 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Tue, 03 Nov 2026 14:44:00 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.5/stl/vector</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.5-stl-vector.html</link><description>## vector的定义和特性
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Thu, 05 Nov 2026 00:51:49 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习番外/一些函数和常见易错知识的总结</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-fan-wai---yi-xie-han-shu-he-chang-jian-yi-cuo-zhi-shi-de-zong-jie.html</link><description>1. find函数
+   ```c++
+   vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+   auto it = find(v.begin(), v.end(), 3);//从开始到结束找元素为3的,左闭右开,如果没找到返回end对应元素
+   ```
+2. toupper函数
+   ```c++
+   char a='a';
+   char upper=toypper(a);
+   cout&lt;&lt;upper&lt;&lt;' '&lt;&lt;a;//先输出A然后输出a
+   cout&lt;&lt;toupper(A);//无变化就输出
+   cout&lt;&lt;toupper(1);//无变化就输出
+   ```
+。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-fan-wai---yi-xie-han-shu-he-chang-jian-yi-cuo-zhi-shi-de-zong-jie.html</guid><pubDate>Wed, 04 Nov 2026 02:56:05 +0000</pubDate></item><item><title>算法学习NO.5/stl/vector</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.5-stl-vector.html</link><description>## vector的定义和特性
 1. vectorr的建立
    ```c++
    vector&lt;T&gt; a;
