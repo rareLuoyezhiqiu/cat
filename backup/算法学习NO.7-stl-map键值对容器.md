@@ -17,8 +17,8 @@
    a.end();
    a.clear();
    a.empty();
-   a.lower_bound();//作用存疑
-   a.upper_bound();//作用存疑
+   **a.lower_bound();//作用存疑**
+   **a.upper_bound();//作用存疑**
    ```
 ## mutimap键值对容器***实际基本用不上
 1. 与map区别在于可以存储相同key的键值对，用map3.中内容即一个T1key可以存储多个T2value
@@ -56,6 +56,8 @@
    a.size();
    a.empty();
    a.clear();
+   a.begin();
+   a.end();
    ```
 4. 注释
    由于该容器时间复杂度太过于不稳定，因此这种容器的使用极为少见，你也不想辛辛苦苦写了半天的码超时罢
