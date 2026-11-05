@@ -20,6 +20,13 @@
    a.lower_bound();//作用存疑
    a.upper_bound();//作用存疑
    ```
-## mutimap键值对容器
-
+## mutimap键值对容器***实际基本用不上
+1. 与map区别在于可以存储相同key的键值对，用map3.中内容即一个T1key可以存储多个T2value
+   且map支持下标访问，mutimap不支持
+2. 使用定义
+   ```c++
+      mutimap<T1,T2> a;
+   ```
+3. 常用函数
+   ```c++
    
