@@ -32,3 +32,6 @@
    auto len=unique(a.begin(),a.end());//注意unique返回的是迭代器不是下标，要用auto承接。unique会把不重复的元素放在前面覆盖掉重复的元素，多出来的部分则成未赋值脏数据，需要通过erase函数删除
    a.erase(len,a.end());//从len开始删除到最后
    ```
+## 相关例题
+[宝藏排序Ⅱ](https://www.lanqiao.cn/problems/3226/learning/?page=1&first_category_id=1&problem_id=3226)
+[P2141 [NOIP 2014 普及组] 珠心算测验](https://www.luogu.com.cn/problem/P2141)

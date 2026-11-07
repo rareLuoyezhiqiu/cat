@@ -164,7 +164,10 @@ a.erase(a.begin()+<span class="pl-c1">1</span>,a.begin()+<span class="pl-c1">4</
 <div class="highlight highlight-source-c++"><pre class="notranslate">vector&lt;<span class="pl-k">int</span>&gt; a={<span class="pl-c1">1</span>,<span class="pl-c1">4</span>,<span class="pl-c1">3</span>,<span class="pl-c1">2</span>,<span class="pl-c1">5</span>};
 <span class="pl-en">sort</span>(a.begin(),a.end())<span class="pl-c"><span class="pl-c">//</span>sort排序默认从小到大，sort(a.begin(),a.end(),greater&lt;int&gt;)</span>
 auto len=unique(a.begin(),a.end());<span class="pl-c"><span class="pl-c">//</span>注意unique返回的是迭代器不是下标，要用auto承接。unique会把不重复的元素放在前面覆盖掉重复的元素，多出来的部分则成未赋值脏数据，需要通过erase函数删除</span>
-a.erase(len,a.end());<span class="pl-c"><span class="pl-c">//</span>从len开始删除到最后</span></pre></div></div>
+a.erase(len,a.end());<span class="pl-c"><span class="pl-c">//</span>从len开始删除到最后</span></pre></div>
+<h2>相关例题</h2>
+<p><a href="https://www.lanqiao.cn/problems/3226/learning/?page=1&amp;first_category_id=1&amp;problem_id=3226" rel="nofollow">宝藏排序Ⅱ</a><br>
+<a href="https://www.luogu.com.cn/problem/P2141" rel="nofollow">P2141 [NOIP 2014 普及组] 珠心算测验</a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
