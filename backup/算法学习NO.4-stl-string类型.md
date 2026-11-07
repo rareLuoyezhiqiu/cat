@@ -126,3 +126,7 @@ int main(void)
 思想运用
 DP = 大问题拆成结构相同的小问题 + 这些小问题反复重叠（所以要存表） + 小问题的最优解能拼出大问题的最优解
 DP数组则是用来存储数据状态的数组，也就是我的题解中创建的dp[n]用来存储链长度
+## 相关例题
+[P1055 [NOIP 2008 普及组] ISBN 号码](https://www.luogu.com.cn/problem/P1055)
+[反转字符串中的字符](https://www.lanqiao.cn/problems/250/learning/?page=1&first_category_id=1&problem_id=250)
+[P1481 魔族密码](https://www.luogu.com.cn/problem/P1481)
