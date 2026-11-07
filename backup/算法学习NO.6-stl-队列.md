@@ -53,3 +53,8 @@
    a.size();
    a.clear();//清除所有元素
    ```
+## 相关例题
+[CLZ银行问题](https://www.lanqiao.cn/problems/1113/learning/?page=1&first_category_id=1&problem_id=1113)
+[P1996 约瑟夫问题](https://www.luogu.com.cn/problem/P1996)
+[合并果子](https://www.lanqiao.cn/problems/741/learning/?page=1&first_category_id=1&problem_id=741)
+[小蓝吃糖果](https://www.lanqiao.cn/problems/1624/learning/?page=1&first_category_id=1&problem_id=1624)
