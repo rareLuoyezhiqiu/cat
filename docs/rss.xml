@@ -1,5 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Sat, 07 Nov 2026 03:46:39 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.9/stl/list链表</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.9-stl-list-lian-biao.html</link><description>## list链表
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Sun, 08 Nov 2026 01:49:25 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.10/双指针</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.10--shuang-zhi-zhen.html</link><description>~难道不是我想的那个指针吗，那太好了我没学指针~
+## 左神の双指针理解(~不写我的理解因为我也没理解~
+      关键不在于双指针的外表，主要在于其做题的内在思维，这种类型的题很有可能需向单调性(贪心)方面思考
+## 双指针常见类型
+1. 同行双指针 #
+2. 快慢双指针
+3. 从两头往中间的双指针
+4. 其他类型
+## 例题
+[按奇偶排序数组2](https://leetcode.cn/problems/sort-array-by-parity-ii/description/)
+```c++
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main(void)
+{ 
+ string a;
+ vector&lt;int&gt; b;
+ getline(cin,a);
+ for(auto i:a)if(i&gt;='0'&amp;&amp;i&lt;='9')b.push_back(i);//仅写入数字到数组中
+
+for(int i=0,k=1;i&lt;=b.size(),k&lt;=b.size();i+=2,k+=2)
+{ if(b[b.size()-1]%2==0))
+     {swap(b[i],b[b.size()-1])}
+  else
+     {swap(b[k],b[b.size()-1])};
+
+cout&lt;&lt;'[';
+for(auto i:b)
+   {cout&lt;&lt;i&lt;&lt;' ';};
+cout&lt;&lt;']';
+}
+```。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.10--shuang-zhi-zhen.html</guid><pubDate>Sat, 07 Nov 2026 03:59:10 +0000</pubDate></item><item><title>算法学习NO.9/stl/list链表</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.9-stl-list-lian-biao.html</link><description>## list链表
 1. 是一种双向链表容器，以节点形式存储元素，用指针链接元素
 2. 使用定义
    ```c++
