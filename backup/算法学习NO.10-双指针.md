@@ -16,10 +16,10 @@ int main(void)
  string a;
  vector<int> b;
  getline(cin,a);
- for(auto i:a)if(i>='0'&&i<='9')b.push_back(i);//仅写入数字到数组中
+ for(auto i:a)if(i>='0'&&i<='9')b.push_back(i-'0');//仅写入数字到数组中
 
-for(int i=0,k=1;i<=b.size(),k<=b.size();i+=2,k+=2)
-{ if(b[b.size()-1]%2==0))
+for(int i=0,k=1;k<=b.size();i+=2,k+=2)
+{ if(b[b.size()-1]%2==0)
      {swap(b[i],b[b.size()-1])}
   else
      {swap(b[k],b[b.size()-1])};

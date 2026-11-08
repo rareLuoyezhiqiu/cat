@@ -28,10 +28,10 @@ int main(void)
  string a;
  vector<int> b;
  getline(cin,a);
- for(auto i:a)if(i>='0'&&i<='9')b.push_back(i);//仅写入数字到数组中
+ for(auto i:a)if(i>='0'&&i<='9')b.push_back(i-'0');//仅写入数字到数组中
 
-for(int i=0,k=1;i<=b.size(),k<=b.size();i+=2,k+=2)
-{ if(b[b.size()-1]%2==0))
+for(int i=0,k=1;k<=b.size();i+=2,k+=2)
+{ if(b[b.size()-1]%2==0)
      {swap(b[i],b[b.size()-1])}
   else
      {swap(b[k],b[b.size()-1])};
@@ -61,10 +61,10 @@ int main(void)
  string a;
  vector<int> b;
  getline(cin,a);
- for(auto i:a)if(i>='0'&&i<='9')b.push_back(i);//仅写入数字到数组中
+ for(auto i:a)if(i>='0'&&i<='9')b.push_back(i-'0');//仅写入数字到数组中
 
-for(int i=0,k=1;i<=b.size(),k<=b.size();i+=2,k+=2)
-{ if(b[b.size()-1]%2==0))
+for(int i=0,k=1;k<=b.size();i+=2,k+=2)
+{ if(b[b.size()-1]%2==0)
      {swap(b[i],b[b.size()-1])}
   else
      {swap(b[k],b[b.size()-1])};
@@ -165,10 +165,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
  string a;
  vector&lt;<span class="pl-k">int</span>&gt; b;
  <span class="pl-c1">getline</span>(cin,a);
- <span class="pl-k">for</span>(<span class="pl-k">auto</span> i:a)<span class="pl-k">if</span>(i&gt;=<span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>&amp;&amp;i&lt;=<span class="pl-s"><span class="pl-pds">'</span>9<span class="pl-pds">'</span></span>)b.<span class="pl-c1">push_back</span>(i);<span class="pl-c"><span class="pl-c">//</span>仅写入数字到数组中</span>
+ <span class="pl-k">for</span>(<span class="pl-k">auto</span> i:a)<span class="pl-k">if</span>(i&gt;=<span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>&amp;&amp;i&lt;=<span class="pl-s"><span class="pl-pds">'</span>9<span class="pl-pds">'</span></span>)b.<span class="pl-c1">push_back</span>(i-<span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>);<span class="pl-c"><span class="pl-c">//</span>仅写入数字到数组中</span>
 
-<span class="pl-k">for</span>(<span class="pl-k">int</span> i=<span class="pl-c1">0</span>,k=<span class="pl-c1">1</span>;i&lt;=b.<span class="pl-c1">size</span>(),k&lt;=b.<span class="pl-c1">size</span>();i+=<span class="pl-c1">2</span>,k+=<span class="pl-c1">2</span>)
-{ <span class="pl-k">if</span>(b[b.<span class="pl-c1">size</span>()-<span class="pl-c1">1</span>]%<span class="pl-c1">2</span>==<span class="pl-c1">0</span>))
+<span class="pl-k">for</span>(<span class="pl-k">int</span> i=<span class="pl-c1">0</span>,k=<span class="pl-c1">1</span>;k&lt;=b.<span class="pl-c1">size</span>();i+=<span class="pl-c1">2</span>,k+=<span class="pl-c1">2</span>)
+{ <span class="pl-k">if</span>(b[b.<span class="pl-c1">size</span>()-<span class="pl-c1">1</span>]%<span class="pl-c1">2</span>==<span class="pl-c1">0</span>)
      {<span class="pl-c1">swap</span>(b[i],b[b.<span class="pl-c1">size</span>()-<span class="pl-c1">1</span>])}
   <span class="pl-k">else</span>
      {<span class="pl-c1">swap</span>(b[k],b[b.<span class="pl-c1">size</span>()-<span class="pl-c1">1</span>])};
