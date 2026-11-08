@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Sun, 08 Nov 2026 02:46:48 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.10/双指针</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.10--shuang-zhi-zhen.html</link><description>~难道不是我想的那个指针吗，那太好了我没学指针~
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>熙熙洛叶知秋の个人博客</title><link>https://rareLuoyezhiqiu.github.io/cat</link><description>这里是熙熙洛叶知秋,记录一些我的学习经历日常生活~</description><copyright>熙熙洛叶知秋の个人博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/133500477?v=4&amp;size=64</url><title>avatar</title><link>https://rareLuoyezhiqiu.github.io/cat</link></image><lastBuildDate>Sun, 08 Nov 2026 02:49:11 +0000</lastBuildDate><managingEditor>熙熙洛叶知秋の个人博客</managingEditor><ttl>60</ttl><webMaster>熙熙洛叶知秋の个人博客</webMaster><item><title>算法学习NO.10/双指针</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.10--shuang-zhi-zhen.html</link><description>~难道不是我想的那个指针吗，那太好了我没学指针~
 ## 左神の双指针理解(~不写我的理解因为我也没理解~
       关键不在于双指针的外表，主要在于其做题的内在思维，这种类型的题很有可能需向单调性(贪心)方面思考
 ## 双指针常见类型
@@ -197,7 +197,14 @@ cout&lt;&lt;']';
    cout&lt;&lt;toupper(A);//无变化就输出
    cout&lt;&lt;toupper(1);//无变化就输出
    ```
-。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-fan-wai---yi-xie-han-shu-he-chang-jian-yi-cuo-zhi-shi-de-zong-jie.html</guid><pubDate>Wed, 04 Nov 2026 02:56:05 +0000</pubDate></item><item><title>算法学习NO.5/stl/vector</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.5-stl-vector.html</link><description>## vector的定义和特性
+3. isdigit函数
+   判断一个字符是不是十进制数字字符（'0' 到 '9'）
+   ```c++
+   isdigit('a');//false
+   isdigit('L');//false
+   isdigit(';');//false
+   isfigit('1');//true
+   ```。</description><guid isPermaLink="true">https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-fan-wai---yi-xie-han-shu-he-chang-jian-yi-cuo-zhi-shi-de-zong-jie.html</guid><pubDate>Wed, 04 Nov 2026 02:56:05 +0000</pubDate></item><item><title>算法学习NO.5/stl/vector</title><link>https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.5-stl-vector.html</link><description>## vector的定义和特性
 1. vectorr的建立
    ```c++
    vector&lt;T&gt; a;

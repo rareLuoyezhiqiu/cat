@@ -23,7 +23,14 @@
    cout<<toupper(A);//无变化就输出
    cout<<toupper(1);//无变化就输出
    ```
-。">
+3. isdigit函数
+   判断一个字符是不是十进制数字字符（'0' 到 '9'）
+   ```c++
+   isdigit('a');//false
+   isdigit('L');//false
+   isdigit(';');//false
+   isfigit('1');//true
+   ```。">
 <meta property="og:title" content="算法学习番外/一些函数和常见易错知识的总结">
 <meta property="og:description" content="1. find函数
    ```c++
@@ -38,7 +45,14 @@
    cout<<toupper(A);//无变化就输出
    cout<<toupper(1);//无变化就输出
    ```
-。">
+3. isdigit函数
+   判断一个字符是不是十进制数字字符（'0' 到 '9'）
+   ```c++
+   isdigit('a');//false
+   isdigit('L');//false
+   isdigit(';');//false
+   isfigit('1');//true
+   ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-fan-wai---yi-xie-han-shu-he-chang-jian-yi-cuo-zhi-shi-de-zong-jie.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/133500477?v=4&size=64">
@@ -120,6 +134,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 cout&lt;&lt;upper&lt;&lt;<span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>&lt;&lt;a;<span class="pl-c"><span class="pl-c">//</span>先输出A然后输出a</span>
 cout&lt;&lt;toupper(A);<span class="pl-c"><span class="pl-c">//</span>无变化就输出</span>
 cout&lt;&lt;toupper(<span class="pl-c1">1</span>);<span class="pl-c"><span class="pl-c">//</span>无变化就输出</span></pre></div>
+</li>
+<li>isdigit函数<br>
+判断一个字符是不是十进制数字字符（'0' 到 '9'）
+<div class="highlight highlight-source-c++"><pre class="notranslate"><span class="pl-en">isdigit</span>(<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>);<span class="pl-c"><span class="pl-c">//</span>false</span>
+<span class="pl-en">isdigit</span>(<span class="pl-s"><span class="pl-pds">'</span>L<span class="pl-pds">'</span></span>);<span class="pl-c"><span class="pl-c">//</span>false</span>
+<span class="pl-en">isdigit</span>(<span class="pl-s"><span class="pl-pds">'</span>;<span class="pl-pds">'</span></span>);<span class="pl-c"><span class="pl-c">//</span>false</span>
+<span class="pl-en">isfigit</span>(<span class="pl-s"><span class="pl-pds">'</span>1<span class="pl-pds">'</span></span>);<span class="pl-c"><span class="pl-c">//</span>true</span></pre></div>
 </li>
 </ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
