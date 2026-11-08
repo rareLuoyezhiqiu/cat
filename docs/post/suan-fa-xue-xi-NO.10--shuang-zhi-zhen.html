@@ -14,7 +14,7 @@
 ## 左神の双指针理解(~不写我的理解因为我也没理解~
       关键不在于双指针的外表，主要在于其做题的内在思维，这种类型的题很有可能需向单调性(贪心)方面思考
 ## 双指针常见类型
-1. 同行双指针 #
+1. 同行双指针
 2. 快慢双指针
 3. 从两头往中间的双指针
 4. 其他类型
@@ -28,7 +28,13 @@ int main(void)
  string a;
  vector<int> b;
  getline(cin,a);
- for(auto i:a)if(i>='0'&&i<='9')b.push_back(i-'0');//仅写入数字到数组中
+ int all=0;
+ for(auto i:a)
+ {if(isdigit(i))
+   {all=all*10+(i-'0');}
+  else 
+   {if(all!=0)
+      {b.push(all);};};//仅写入数字到数组中
 
 for(int i=0,k=1;k<=b.size();i+=2,k+=2)
 { if(b[b.size()-1]%2==0)
@@ -47,7 +53,7 @@ cout<<']';
 ## 左神の双指针理解(~不写我的理解因为我也没理解~
       关键不在于双指针的外表，主要在于其做题的内在思维，这种类型的题很有可能需向单调性(贪心)方面思考
 ## 双指针常见类型
-1. 同行双指针 #
+1. 同行双指针
 2. 快慢双指针
 3. 从两头往中间的双指针
 4. 其他类型
@@ -61,7 +67,13 @@ int main(void)
  string a;
  vector<int> b;
  getline(cin,a);
- for(auto i:a)if(i>='0'&&i<='9')b.push_back(i-'0');//仅写入数字到数组中
+ int all=0;
+ for(auto i:a)
+ {if(isdigit(i))
+   {all=all*10+(i-'0');}
+  else 
+   {if(all!=0)
+      {b.push(all);};};//仅写入数字到数组中
 
 for(int i=0,k=1;k<=b.size();i+=2,k+=2)
 { if(b[b.size()-1]%2==0)
@@ -151,7 +163,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </code></pre>
 <h2>双指针常见类型</h2>
 <ol>
-<li>同行双指针 #</li>
+<li>同行双指针</li>
 <li>快慢双指针</li>
 <li>从两头往中间的双指针</li>
 <li>其他类型</li>
@@ -165,7 +177,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
  string a;
  vector&lt;<span class="pl-k">int</span>&gt; b;
  <span class="pl-c1">getline</span>(cin,a);
- <span class="pl-k">for</span>(<span class="pl-k">auto</span> i:a)<span class="pl-k">if</span>(i&gt;=<span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>&amp;&amp;i&lt;=<span class="pl-s"><span class="pl-pds">'</span>9<span class="pl-pds">'</span></span>)b.<span class="pl-c1">push_back</span>(i-<span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>);<span class="pl-c"><span class="pl-c">//</span>仅写入数字到数组中</span>
+ <span class="pl-k">int</span> all=<span class="pl-c1">0</span>;
+ <span class="pl-k">for</span>(<span class="pl-k">auto</span> i:a)
+ {<span class="pl-k">if</span>(<span class="pl-c1">isdigit</span>(i))
+   {all=all*<span class="pl-c1">10</span>+(i-<span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>);}
+  <span class="pl-k">else</span> 
+   {<span class="pl-k">if</span>(all!=<span class="pl-c1">0</span>)
+      {b.<span class="pl-c1">push</span>(all);};};<span class="pl-c"><span class="pl-c">//</span>仅写入数字到数组中</span>
 
 <span class="pl-k">for</span>(<span class="pl-k">int</span> i=<span class="pl-c1">0</span>,k=<span class="pl-c1">1</span>;k&lt;=b.<span class="pl-c1">size</span>();i+=<span class="pl-c1">2</span>,k+=<span class="pl-c1">2</span>)
 { <span class="pl-k">if</span>(b[b.<span class="pl-c1">size</span>()-<span class="pl-c1">1</span>]%<span class="pl-c1">2</span>==<span class="pl-c1">0</span>)
