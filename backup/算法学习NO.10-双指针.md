@@ -25,8 +25,7 @@ int main(void)
       {b.push_back(all);
        all=0;};};//仅写入数字到数组中
 
-int i=0,k=1;
-while(i<=b.size()-1||k<=b.size()-1)
+for(int i=0,k=1;i<b.size()&&k<b.size();)
 { if(b[b.size()-1]%2==0)
      {swap(b[i],b[b.size()-1]);
       i+=2;}
