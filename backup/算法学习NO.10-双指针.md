@@ -22,7 +22,8 @@ int main(void)
    {all=all*10+(i-'0');}
   else 
    {if(all!=0)
-      {b.push(all);};};//仅写入数字到数组中
+      {b.push_back(all);
+       all=0;};};//仅写入数字到数组中
 
 int i=0,k=1;
 while(i<=b.size()-1||k<=b.size()-1)

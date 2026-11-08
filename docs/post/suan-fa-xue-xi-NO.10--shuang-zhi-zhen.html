@@ -34,7 +34,8 @@ int main(void)
    {all=all*10+(i-'0');}
   else 
    {if(all!=0)
-      {b.push(all);};};//仅写入数字到数组中
+      {b.push_back(all);
+       all=0;};};//仅写入数字到数组中
 
 int i=0,k=1;
 while(i<=b.size()-1||k<=b.size()-1)
@@ -77,7 +78,8 @@ int main(void)
    {all=all*10+(i-'0');}
   else 
    {if(all!=0)
-      {b.push(all);};};//仅写入数字到数组中
+      {b.push_back(all);
+       all=0;};};//仅写入数字到数组中
 
 int i=0,k=1;
 while(i<=b.size()-1||k<=b.size()-1)
@@ -191,7 +193,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
    {all=all*<span class="pl-c1">10</span>+(i-<span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>);}
   <span class="pl-k">else</span> 
    {<span class="pl-k">if</span>(all!=<span class="pl-c1">0</span>)
-      {b.<span class="pl-c1">push</span>(all);};};<span class="pl-c"><span class="pl-c">//</span>仅写入数字到数组中</span>
+      {b.<span class="pl-c1">push_back</span>(all);
+       all=<span class="pl-c1">0</span>;};};<span class="pl-c"><span class="pl-c">//</span>仅写入数字到数组中</span>
 
 <span class="pl-k">int</span> i=<span class="pl-c1">0</span>,k=<span class="pl-c1">1</span>;
 <span class="pl-k">while</span>(i&lt;=b.<span class="pl-c1">size</span>()-<span class="pl-c1">1</span>||k&lt;=b.<span class="pl-c1">size</span>()-<span class="pl-c1">1</span>)
