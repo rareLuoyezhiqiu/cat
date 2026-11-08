@@ -9,6 +9,7 @@
 ## 例题
 [按奇偶排序数组2](https://leetcode.cn/problems/sort-array-by-parity-ii/description/)
 ```c++
+注意这是c++全部版本，leetcode直接写这个不行
 #include<bits/stdc++.h>
 using namespace std;
 int main(void)
