@@ -12,9 +12,11 @@
     </script>
 <meta name="description" content="## set集合
 1. 是一种用于存储**唯一元素**的容器，其中的元素**默认升序**排序，使用<进行比较
-2. 使用定义
+    因为插入元素必须是唯一的，所以插入重复元素的时候set会自动忽略该元素
+3. 使用定义   
    ```c++
    set<int> a;
+   set<int,greater<int>> a;
    ```
 3. 常用函数
    ```c++
@@ -34,13 +36,57 @@
    
    a.swap();//不常用
    a.equal_range();//不常用
-   ```。">
+   ```
+## multisat集合
+1. 与set不同之处在于允许存储**非唯一元素**
+2. 使用定义
+   ```c++
+   multiset<int> a;
+   multiset<int,gteater<int>> a;
+   ```
+3.常用函数
+   ```c++
+   multiset<int> a;
+   a.insert(1);
+   a.erase(1);
+   a.find(1);
+   a.lower_bound();
+   a.upper_bound();
+   a.size();
+   a.empty();
+   a.clear();
+   a.begin();
+   a.end();
+   a.rbegin();
+   a.rend();
+
+   a.swap();//不常用
+   a.equal_range();//不常用
+   ```
+## unordered_set无序集合
+1. 与set相同是存储唯一元素的容器,但没有特定的顺序,因时间复杂度极不稳定所以极少使用
+2. 使用定义
+   ```c++
+   unordered_set<int> a;
+   ```
+3. 常用函数
+   ```c++
+   unordered_set<int> a;
+   a.insert();
+   a.erase();
+   a.find();
+   a.count();
+   a.size();
+   ```
+。">
 <meta property="og:title" content="算法学习NO.11/stl/set集合">
 <meta property="og:description" content="## set集合
 1. 是一种用于存储**唯一元素**的容器，其中的元素**默认升序**排序，使用<进行比较
-2. 使用定义
+    因为插入元素必须是唯一的，所以插入重复元素的时候set会自动忽略该元素
+3. 使用定义   
    ```c++
    set<int> a;
+   set<int,greater<int>> a;
    ```
 3. 常用函数
    ```c++
@@ -60,7 +106,49 @@
    
    a.swap();//不常用
    a.equal_range();//不常用
-   ```。">
+   ```
+## multisat集合
+1. 与set不同之处在于允许存储**非唯一元素**
+2. 使用定义
+   ```c++
+   multiset<int> a;
+   multiset<int,gteater<int>> a;
+   ```
+3.常用函数
+   ```c++
+   multiset<int> a;
+   a.insert(1);
+   a.erase(1);
+   a.find(1);
+   a.lower_bound();
+   a.upper_bound();
+   a.size();
+   a.empty();
+   a.clear();
+   a.begin();
+   a.end();
+   a.rbegin();
+   a.rend();
+
+   a.swap();//不常用
+   a.equal_range();//不常用
+   ```
+## unordered_set无序集合
+1. 与set相同是存储唯一元素的容器,但没有特定的顺序,因时间复杂度极不稳定所以极少使用
+2. 使用定义
+   ```c++
+   unordered_set<int> a;
+   ```
+3. 常用函数
+   ```c++
+   unordered_set<int> a;
+   a.insert();
+   a.erase();
+   a.find();
+   a.count();
+   a.size();
+   ```
+。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.11-stl-set-ji-he.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/133500477?v=4&size=64">
@@ -133,9 +221,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><h2>set集合</h2>
 <ol>
-<li>是一种用于存储<strong>唯一元素</strong>的容器，其中的元素<strong>默认升序</strong>排序，使用&lt;进行比较</li>
+<li>是一种用于存储<strong>唯一元素</strong>的容器，其中的元素<strong>默认升序</strong>排序，使用&lt;进行比较<br>
+因为插入元素必须是唯一的，所以插入重复元素的时候set会自动忽略该元素</li>
 <li>使用定义
-<div class="highlight highlight-source-c++"><pre class="notranslate">set&lt;<span class="pl-k">int</span>&gt; a;</pre></div>
+<div class="highlight highlight-source-c++"><pre class="notranslate">set&lt;<span class="pl-k">int</span>&gt; a;
+set&lt;<span class="pl-k">int</span>,greater&lt;<span class="pl-k">int</span>&gt;&gt; a;</pre></div>
 </li>
 <li>常用函数
 <div class="highlight highlight-source-c++"><pre class="notranslate">set&lt;<span class="pl-k">int</span>&gt; a;
@@ -154,6 +244,46 @@ a.rend();
 
 a.swap();<span class="pl-c"><span class="pl-c">//</span>不常用</span>
 a.equal_range();<span class="pl-c"><span class="pl-c">//</span>不常用</span></pre></div>
+</li>
+</ol>
+<h2>multisat集合</h2>
+<ol>
+<li>与set不同之处在于允许存储<strong>非唯一元素</strong></li>
+<li>使用定义
+<div class="highlight highlight-source-c++"><pre class="notranslate">multiset&lt;<span class="pl-k">int</span>&gt; a;
+multiset&lt;<span class="pl-k">int</span>,gteater&lt;<span class="pl-k">int</span>&gt;&gt; a;</pre></div>
+</li>
+</ol>
+<p>3.常用函数</p>
+<div class="highlight highlight-source-c++"><pre class="notranslate">multiset&lt;<span class="pl-k">int</span>&gt; a;
+a.insert(<span class="pl-c1">1</span>);
+a.erase(<span class="pl-c1">1</span>);
+a.find(<span class="pl-c1">1</span>);
+a.lower_bound();
+a.upper_bound();
+a.size();
+a.empty();
+a.clear();
+a.begin();
+a.end();
+a.rbegin();
+a.rend();
+
+a.swap();<span class="pl-c"><span class="pl-c">//</span>不常用</span>
+a.equal_range();<span class="pl-c"><span class="pl-c">//</span>不常用</span></pre></div>
+<h2>unordered_set无序集合</h2>
+<ol>
+<li>与set相同是存储唯一元素的容器,但没有特定的顺序,因时间复杂度极不稳定所以极少使用</li>
+<li>使用定义
+<div class="highlight highlight-source-c++"><pre class="notranslate">unordered_set&lt;<span class="pl-k">int</span>&gt; a;</pre></div>
+</li>
+<li>常用函数
+<div class="highlight highlight-source-c++"><pre class="notranslate">unordered_set&lt;<span class="pl-k">int</span>&gt; a;
+a.insert();
+a.erase();
+a.find();
+a.count();
+a.size();</pre></div>
 </li>
 </ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
