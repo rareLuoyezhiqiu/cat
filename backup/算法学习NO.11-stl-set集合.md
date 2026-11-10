@@ -66,3 +66,7 @@
    a.count();
    a.size();
    ```
+## 相关例题
+[P1540 [NOIP 2010 提高组] 机器翻译](https://www.luogu.com.cn/problem/P1540)
+[P1059 [NOIP 2006 普及组] 明明的随机数](https://www.luogu.com.cn/problem/P1059)
+[P5250 【深基17.例5】木材仓库](https://www.luogu.com.cn/problem/P5250)
