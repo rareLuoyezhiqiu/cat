@@ -11,6 +11,7 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="哎三编了，看了视频看一半发现想太复杂了，居然真是暴力解法，那就直接贴例题了（）
+四编了，看例题全都想不到方法，看答案就懂什么意思了，哎，感觉自己真是笨比了
 ### 例题
 1. [区间次方和](https://www.lanqiao.cn/problems/3382/learning/?page=1&first_category_id=1&problem_id=3382)
 ```c++
@@ -61,9 +62,34 @@ int main()
   return 0;
 }
 ```
-。">
+2. [小郑的蓝桥平衡串](https://www.lanqiao.cn/problems/3419/learning/?page=1&first_category_id=1&problem_id=3419)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  string a;
+  cin>>a;
+  int len=0,z=0;
+
+  for(int i=0;i<a.size();i++)
+  for(int k=i+1;k<a.size();k++)
+  {z=0;
+  for(int m=i;m<=k;m++)
+    if(a[m]=='L')z++;
+    else z--;
+
+  if(z==0)len=max(len,k-i+1);
+  }
+
+  cout<<len<<endl;
+
+  return 0;
+}
+```。">
 <meta property="og:title" content="算法学习NO.12/前缀和与差分">
 <meta property="og:description" content="哎三编了，看了视频看一半发现想太复杂了，居然真是暴力解法，那就直接贴例题了（）
+四编了，看例题全都想不到方法，看答案就懂什么意思了，哎，感觉自己真是笨比了
 ### 例题
 1. [区间次方和](https://www.lanqiao.cn/problems/3382/learning/?page=1&first_category_id=1&problem_id=3382)
 ```c++
@@ -114,7 +140,31 @@ int main()
   return 0;
 }
 ```
-。">
+2. [小郑的蓝桥平衡串](https://www.lanqiao.cn/problems/3419/learning/?page=1&first_category_id=1&problem_id=3419)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  string a;
+  cin>>a;
+  int len=0,z=0;
+
+  for(int i=0;i<a.size();i++)
+  for(int k=i+1;k<a.size();k++)
+  {z=0;
+  for(int m=i;m<=k;m++)
+    if(a[m]=='L')z++;
+    else z--;
+
+  if(z==0)len=max(len,k-i+1);
+  }
+
+  cout<<len<<endl;
+
+  return 0;
+}
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://rareLuoyezhiqiu.github.io/cat/post/suan-fa-xue-xi-NO.12--qian-zhui-he-yu-cha-fen.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/133500477?v=4&size=64">
@@ -185,7 +235,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>哎三编了，看了视频看一半发现想太复杂了，居然真是暴力解法，那就直接贴例题了（）</p>
+<div class="markdown-body" id="postBody"><p>哎三编了，看了视频看一半发现想太复杂了，居然真是暴力解法，那就直接贴例题了（）<br>
+四编了，看例题全都想不到方法，看答案就懂什么意思了，哎，感觉自己真是笨比了</p>
 <h3>例题</h3>
 <ol>
 <li><a href="https://www.lanqiao.cn/problems/3382/learning/?page=1&amp;first_category_id=1&amp;problem_id=3382" rel="nofollow">区间次方和</a></li>
@@ -234,6 +285,31 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     cin&gt;&gt;l&gt;&gt;r&gt;&gt;k;
     cout&lt;&lt;(b[r][k]-b[l-<span class="pl-c1">1</span>][k])%<span class="pl-c1">1000000007</span>&lt;&lt;endl;
   };
+  <span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<ol start="2">
+<li><a href="https://www.lanqiao.cn/problems/3419/learning/?page=1&amp;first_category_id=1&amp;problem_id=3419" rel="nofollow">小郑的蓝桥平衡串</a></li>
+</ol>
+<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>bits/stdc++.h<span class="pl-pds">&gt;</span></span>
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
+<span class="pl-k">int</span> <span class="pl-en">main</span>()
+{
+  string a;
+  cin&gt;&gt;a;
+  <span class="pl-k">int</span> len=<span class="pl-c1">0</span>,z=<span class="pl-c1">0</span>;
+
+  <span class="pl-k">for</span>(<span class="pl-k">int</span> i=<span class="pl-c1">0</span>;i&lt;a.<span class="pl-c1">size</span>();i++)
+  <span class="pl-k">for</span>(<span class="pl-k">int</span> k=i+<span class="pl-c1">1</span>;k&lt;a.<span class="pl-c1">size</span>();k++)
+  {z=<span class="pl-c1">0</span>;
+  <span class="pl-k">for</span>(<span class="pl-k">int</span> m=i;m&lt;=k;m++)
+    <span class="pl-k">if</span>(a[m]==<span class="pl-s"><span class="pl-pds">'</span>L<span class="pl-pds">'</span></span>)z++;
+    <span class="pl-k">else</span> z--;
+
+  <span class="pl-k">if</span>(z==<span class="pl-c1">0</span>)len=<span class="pl-c1">max</span>(len,k-i+<span class="pl-c1">1</span>);
+  }
+
+  cout&lt;&lt;len&lt;&lt;endl;
+
   <span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>

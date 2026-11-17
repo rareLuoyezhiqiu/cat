@@ -1,4 +1,5 @@
 哎三编了，看了视频看一半发现想太复杂了，居然真是暴力解法，那就直接贴例题了（）
+四编了，看例题全都想不到方法，看答案就懂什么意思了，哎，感觉自己真是笨比了
 ### 例题
 1. [区间次方和](https://www.lanqiao.cn/problems/3382/learning/?page=1&first_category_id=1&problem_id=3382)
 ```c++
@@ -46,6 +47,31 @@ int main()
     cin>>l>>r>>k;
     cout<<(b[r][k]-b[l-1][k])%1000000007<<endl;
   };
+  return 0;
+}
+```
+2. [小郑的蓝桥平衡串](https://www.lanqiao.cn/problems/3419/learning/?page=1&first_category_id=1&problem_id=3419)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  string a;
+  cin>>a;
+  int len=0,z=0;
+
+  for(int i=0;i<a.size();i++)
+  for(int k=i+1;k<a.size();k++)
+  {z=0;
+  for(int m=i;m<=k;m++)
+    if(a[m]=='L')z++;
+    else z--;
+
+  if(z==0)len=max(len,k-i+1);
+  }
+
+  cout<<len<<endl;
+
   return 0;
 }
 ```
